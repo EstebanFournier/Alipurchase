@@ -1,0 +1,39 @@
+﻿<Window x:Class="AliPurchase.AuthenticateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AliPurchase"
+        mc:Ignorable="d"
+        Title="AliPurchase" 
+        Height="450" 
+        Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Logo-->
+        <Image Grid.Row="1" Grid.Column="1" Source="/Assets/alizonLogo.png"/>
+        
+        <!-- Formulaire d'authentification-->
+        <StackPanel Grid.Row="1" Grid.Column="3">
+            <Label FontSize="15">Email :</Label>
+            <TextBox x:Name="tbx_email" FontSize="15" Height="30" VerticalContentAlignment="Center"></TextBox>
+            <Label Margin="0,10,0,0" FontSize="15">Mot de passe :</Label>
+            <PasswordBox x:Name="pbx_pwd" FontSize="15" Height="30" VerticalContentAlignment="Center"></PasswordBox>
+            <Button x:Name="btn_signin" Click="Btn_Signin_Click" Margin="0,10,0,0" FontSize="15" Height="30">Se connecter</Button>
+            <TextBlock x:Name="tbx_message" Margin="0,10,0,0" Height="30" Foreground="Red"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
